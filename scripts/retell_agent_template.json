@@ -1,0 +1,13 @@
+{
+  "agent_name": "",
+  "version": "",
+  "company_name": "",
+  "greeting_message": "",
+  "business_hours_logic": "",
+  "after_hours_logic": "",
+  "emergency_flow": "",
+  "non_emergency_flow": "",
+  "information_to_collect": [],
+  "fallback_behavior": "",
+  "notes": ""
+}

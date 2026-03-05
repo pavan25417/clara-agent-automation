@@ -1,0 +1,20 @@
+[
+  {
+    "field": "business_hours",
+    "old_value": "",
+    "new_value": "Monday-Friday, Saturday",
+    "reason": "Saturday hours mentioned during onboarding"
+  },
+  {
+    "field": "on_call_technician",
+    "old_value": "unknown",
+    "new_value": "Rajesh Kumar",
+    "reason": "Provided during onboarding"
+  },
+  {
+    "field": "transfer_timeout",
+    "old_value": "not specified",
+    "new_value": "90 seconds",
+    "reason": "Specified during onboarding"
+  }
+]

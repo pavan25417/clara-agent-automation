@@ -1,0 +1,18 @@
+{
+  "account_id": "",
+  "company_name": "",
+  "location": "",
+  "services_offered": [],
+  "business_hours": {
+    "days": "",
+    "start_time": "",
+    "end_time": "",
+    "timezone": ""
+  },
+  "emergency_definition": [],
+  "emergency_action": "",
+  "non_emergency_flow": "",
+  "information_to_collect": [],
+  "questions_or_unknowns": [],
+  "notes": ""
+}

@@ -1,0 +1,12 @@
+{
+  "total_accounts_processed": 1,
+  "accounts": [
+    {
+      "account_id": "ACCOUNT_001",
+      "company_name": "Ben's Electric Solutions",
+      "services_detected": 3,
+      "unknown_fields": 4,
+      "version_generated": "v2"
+    }
+  ]
+}

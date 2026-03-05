@@ -1,0 +1,89 @@
+{
+ "name": "Clara AI Agent Configuration Pipeline",
+ "nodes": [
+  {
+   "name": "Start",
+   "type": "n8n-nodes-base.manualTrigger",
+   "position": [100, 300]
+  },
+  {
+   "name": "Read Demo Transcript",
+   "type": "n8n-nodes-base.readBinaryFile",
+   "position": [300, 300],
+   "parameters": {
+    "filePath": "inputs/demo_calls/demo_001.txt"
+   }
+  },
+  {
+   "name": "Extract Account Memo",
+   "type": "n8n-nodes-base.executeCommand",
+   "position": [500, 300],
+   "parameters": {
+    "command": "python scripts/extract_demo_data.py"
+   }
+  },
+  {
+   "name": "Validate Memo",
+   "type": "n8n-nodes-base.executeCommand",
+   "position": [700, 300],
+   "parameters": {
+    "command": "python scripts/validate_memo.py"
+   }
+  },
+  {
+   "name": "Generate Agent Spec v1",
+   "type": "n8n-nodes-base.executeCommand",
+   "position": [900, 300],
+   "parameters": {
+    "command": "python scripts/generate_agent_spec.py"
+   }
+  },
+  {
+   "name": "Apply Onboarding Updates",
+   "type": "n8n-nodes-base.executeCommand",
+   "position": [1100, 300],
+   "parameters": {
+    "command": "python scripts/update_to_v2.py"
+   }
+  },
+  {
+   "name": "Generate Agent Spec v2",
+   "type": "n8n-nodes-base.executeCommand",
+   "position": [1300, 300],
+   "parameters": {
+    "command": "python scripts/generate_agent_spec_v2.py"
+   }
+  },
+  {
+   "name": "Generate Summary Report",
+   "type": "n8n-nodes-base.executeCommand",
+   "position": [1500, 300],
+   "parameters": {
+    "command": "python scripts/generate_summary.py"
+   }
+  }
+ ],
+ "connections": {
+  "Start": {
+   "main": [[{ "node": "Read Demo Transcript", "type": "main", "index": 0 }]]
+  },
+  "Read Demo Transcript": {
+   "main": [[{ "node": "Extract Account Memo", "type": "main", "index": 0 }]]
+  },
+  "Extract Account Memo": {
+   "main": [[{ "node": "Validate Memo", "type": "main", "index": 0 }]]
+  },
+  "Validate Memo": {
+   "main": [[{ "node": "Generate Agent Spec v1", "type": "main", "index": 0 }]]
+  },
+  "Generate Agent Spec v1": {
+   "main": [[{ "node": "Apply Onboarding Updates", "type": "main", "index": 0 }]]
+  },
+  "Apply Onboarding Updates": {
+   "main": [[{ "node": "Generate Agent Spec v2", "type": "main", "index": 0 }]]
+  },
+  "Generate Agent Spec v2": {
+   "main": [[{ "node": "Generate Summary Report", "type": "main", "index": 0 }]]
+  }
+ }
+}

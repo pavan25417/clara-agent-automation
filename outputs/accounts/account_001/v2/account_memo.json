@@ -1,0 +1,35 @@
+{
+  "account_id": "ACCOUNT_001",
+  "company_name": "Ben's Electric Solutions",
+  "location": "",
+  "services_offered": [
+    "EV charger installation",
+    "hot tub wiring",
+    "electrical troubleshooting"
+  ],
+  "business_hours": {
+    "days": "Monday-Friday, Saturday",
+    "start_time": "09:00",
+    "end_time": "17:00",
+    "timezone": ""
+  },
+  "emergency_definition": [
+    "gas station power failure",
+    "urgent electrical issue"
+  ],
+  "emergency_action": "",
+  "non_emergency_flow": "collect caller details and schedule service",
+  "information_to_collect": [
+    "caller name",
+    "phone number",
+    "service address",
+    "issue description"
+  ],
+  "questions_or_unknowns": [
+    "Business hours not mentioned in demo call",
+    "Timezone not mentioned",
+    "Emergency routing rules not clearly defined",
+    "Missing information: emergency_action"
+  ],
+  "notes": "On-call technician: Rajesh Kumar | Transfer timeout set to 90 seconds."
+}
